@@ -1,0 +1,105 @@
+<% 
+  let discrim = db.get("Bot-discriminator"); 
+  let username = db.get("Bot-username"); 
+  let guildCount = db.get("Servers-size"); 
+  let prefix = db.get("Bot-prefix"); 
+  let botId = db.get("Bot-usrid") 
+%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <title><%= title %></title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.1/examples/navbar-static/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <%- include("./parts/bootstrap.ejs") %>
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      href="img/CyBR-icon.png"
+      sizes="180x180"
+    />
+    <link
+      rel="icon"
+      href="img/CyBR-icon.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="img/CyBR-icon.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="img/CyBR-icon.png"
+      color="#7952b3"
+    />
+    <link rel="icon" href="img/CyBR-icon.png" />
+    <meta name="theme-color" content="#7952b3" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/cover.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include("./parts/nav.ejs") %> 
+
+    <main class="container">
+      <h1>
+        In
+        <span class="badge bange-sm bg-success"><%= guildCount %></span>
+        Servers!
+      </h1>
+      <p class="lead">CyBR is an Multi purpose discord bot</p>
+      <p class="lead">
+        <a
+          class="btn btn-lg btn-success"
+          href="https://discord.com/api/oauth2/authorize?client_id=<%= botId %>&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth&response_type=code&scope=identify%20email%20guilds"
+          >Login</a
+        >
+        <a
+          href="https://discord.com/api/oauth2/authorize?client_id=<%= botId %>&permissions=8&scope=bot"
+          class="btn btn-lg btn-success"
+          >Invite</a
+        >
+      </p>
+    </main>
+
+    <footer class="text-white-50 fixed-bottom">
+      <a href="https://" A="01" class="text-white">©Project-Helix</a>
+    </footer>
+    <!-- <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+  </body>
+</html>

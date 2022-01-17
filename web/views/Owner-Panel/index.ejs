@@ -1,0 +1,52 @@
+<% 
+  let discrim = db.get("Bot-discriminator");
+  let username = db.get("Bot-username");
+  let guildCount = db.get("Servers-size");
+  let prefix = db.get("Bot-prefix");
+  let botId = db.get("Bot-usrid")
+%>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title><%= title %></title>
+
+    <%- include("../parts/bootstrap.ejs") %>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/OwnerPanel.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+<%- include("../parts/nav.ejs") %> 
+
+    <main role="main" class="container">
+
+      <!-- <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      </div> -->
+
+    <% if (prefix !== cfg.PREFIX) {%>
+        <div class="alert alert-danger" role="alert">
+            The default prefix in the config is different than in the database!<br>
+            Current: <bold><%= prefix %></bold><br>
+            Default: <bold><%= cfg.PREFIX %></bold>
+        </div>
+    <%}%>
+      <form action="/Owner" method="POST" class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Default Prefix</span>
+        <input type="text" class="form-control" id="prfx" placeholder="<%= prefix %>" name="botPrfx" aria-label="default-prefix" aria-describedby="addon-wrapping" value="<%= prefix %>">
+        <!-- <button class="button bg-success no-flex" type="submit" value="accept">Submit</button> -->
+      </form>
+    </main>
+  </body>
+</html>

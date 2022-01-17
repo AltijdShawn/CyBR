@@ -1,0 +1,28 @@
+# All JS files
+/*.js
+/**/*.js
+/**/**/*.js
+
+# Initial stuff
+/node_modules/
+/Transform.sh
+/compile.sh
+
+# Commands
+/commands/fun/reddit.*
+/commands/fun/howisyou.js
+/commands/testmoderation/
+/commands/UnderWorks/
+
+/_commands/
+
+# Other Stuff
+/@userland/
+/.history/
+/.program.ts
+/json.sqlite
+/yarn.lock
+/newWebServerLine
+cfg.js.tmp
+cfg.ts
+IveBot

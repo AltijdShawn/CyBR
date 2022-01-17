@@ -1,0 +1,53 @@
+{
+  "name": "cybr-project",
+  "type": "module",
+  "version": "2.3.2-SNAPSHOT",
+  "description": "The Official CyBR bot made by AmyTheCutie And the Project Helix team ",
+  "main": "index.js",
+  "repository": "https://github.com/project-helix/CyBR.git",
+  "author": "AmyTheCutie and the Project Helix team",
+  "license": "GPL",
+  "private": false,
+  "scripts": {
+    "start": "nodemon .",
+    "build": "tsc -t esnext ./*.ts && tsc -t esnext ./**/*.ts && tsc -t esnext ./**/**/*.ts",
+    "setup": "yarn compile && node setup.js"
+  },
+  "dependencies": {
+    "@discordjs/opus": "latest",
+    "body-parser": "latest",
+    "chalk": "^3.0.0",
+    "ejs": "latest",
+    "enmap": "latest",
+    "eris": "latest",
+    "eris-additions": "latest",
+    "eris-sharder": "^1.10.0",
+    "eventemitter3": "latest",
+    "express": "latest",
+    "ffmpeg": "latest",
+    "figlet": "^1.5.2",
+    "genius-lyrics": "latest",
+    "moment": "latest",
+    "moment-duration-format": "latest",
+    "node-fetch": "^2.6.0",
+    "pg": "latest",
+    "prism-media": "latest",
+    "quick.db": "latest",
+    "simple-knex": "latest",
+    "simple-youtube-api": "latest",
+    "spotify-url-info": "latest",
+    "sqlite": "latest",
+    "tweetnacl": "latest",
+    "uws": "latest",
+    "ytdl-core": "latest",
+    "yuuko": "latest"
+  },
+  "DisabledDependencies": {
+    "better-sqlite3": "^6.0.1",
+    "node-opus": "^0.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "typecript": "^0.0.1-security"
+  }
+}
